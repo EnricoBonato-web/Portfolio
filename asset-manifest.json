@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.60f07906.chunk.css",
-  "main.js": "/static/js/main.0dc2734a.chunk.js",
-  "main.js.map": "/static/js/main.0dc2734a.chunk.js.map",
+  "main.js": "/static/js/main.599fec02.chunk.js",
+  "main.js.map": "/static/js/main.599fec02.chunk.js.map",
   "static/js/1.d3406d19.chunk.js": "/static/js/1.d3406d19.chunk.js",
   "static/js/1.d3406d19.chunk.js.map": "/static/js/1.d3406d19.chunk.js.map",
   "static/css/2.47c3ff21.chunk.css": "/static/css/2.47c3ff21.chunk.css",
@@ -12,13 +12,13 @@
   "runtime~main.js": "/static/js/runtime~main.29c9e5e0.js",
   "runtime~main.js.map": "/static/js/runtime~main.29c9e5e0.js.map",
   "static/media/avatar.svg": "/static/media/avatar.3c9241c2.svg",
-  "static/media/EnricoBonatoCV.pdf": "/static/media/EnricoBonatoCV.0f677133.pdf",
+  "static/media/EnricoBonatoCV.pdf": "/static/media/EnricoBonatoCV.e6bdf646.pdf",
   "static/media/home-main.svg": "/static/media/home-main.1aed08b3.svg",
   "static/media/style.css": "/static/media/home-bg.dc52d5d4.jpg",
   "static/media/about.aee0f771.png": "/static/media/about.aee0f771.png",
-  "static/css/main.60f07906.chunk.css.map": "/static/css/main.60f07906.chunk.css.map",
   "static/css/2.47c3ff21.chunk.css.map": "/static/css/2.47c3ff21.chunk.css.map",
+  "static/css/main.60f07906.chunk.css.map": "/static/css/main.60f07906.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.558d6705dd826685c579fdd07ce5af27.js": "/precache-manifest.558d6705dd826685c579fdd07ce5af27.js",
+  "precache-manifest.6ccf4db7ec51d984827db2768e581495.js": "/precache-manifest.6ccf4db7ec51d984827db2768e581495.js",
   "service-worker.js": "/service-worker.js"
 }
