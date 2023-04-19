@@ -1,38 +1,47 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import { BiLinkExternal } from 'react-icons/bi';
+import { DiJavascript1 as javascript, DiReact as react, DiNodejs as nodejs } from 'react-icons/di';
+import {
+  SiNextdotjs as node,
+  SiCss3 as css,
+  SiTypescript as typescript,
+  SiPhp as php,
+  SiHtml5 as html,
+} from 'react-icons/si';
+import {
+  DiJava as java,
+} from "react-icons/di";
 
 function ProjectCards(props) {
+  const icons = {
+    typescript,
+    php,
+    javascript,
+    react,
+    nodejs,
+    node,
+    css,
+    html,
+    java,
+  };
+	console.log(props)
+  let img = props.imgPath.toLocaleLowerCase();
+	  const immagine = React.createElement(icons[img], {
+	    style: { height: '100px', margin: '10px' },
+	    className: 'card-img',	
+	});
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      {immagine}
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
+        <Card.Text style={{ textAlign: 'justify' }}>{props.description}</Card.Text>
+        <Button variant="primary" href={props.link} target="_blank">
+          <BiLinkExternal /> &nbsp;
+          {props.isBlog ? 'View Blog' : 'View Project'}
         </Button>
-        {"\n"}
-        {"\n"}
-
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
-          </Button>
-        )}
       </Card.Body>
     </Card>
   );
