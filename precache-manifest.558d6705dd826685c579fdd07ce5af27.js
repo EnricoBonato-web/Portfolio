@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "729d1daf04bb16f2c263",
+    "revision": "0dc2734a567c578b9310",
     "url": "/static/css/main.60f07906.chunk.css"
   },
   {
-    "revision": "729d1daf04bb16f2c263",
-    "url": "/static/js/main.729d1daf.chunk.js"
+    "revision": "0dc2734a567c578b9310",
+    "url": "/static/js/main.0dc2734a.chunk.js"
   },
   {
     "revision": "d3406d199b610b0527b6",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/static/media/avatar.3c9241c2.svg"
   },
   {
-    "revision": "6e3ee94c3946b3f50f958de7118ad7f0",
-    "url": "/static/media/CvNew.6e3ee94c.pdf"
+    "revision": "0f677133b460dfe2b084f872d5c2ba84",
+    "url": "/static/media/EnricoBonatoCV.0f677133.pdf"
   },
   {
     "revision": "1aed08b3e1b66991d921d25dbdcf28ed",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/static/media/about.aee0f771.png"
   },
   {
-    "revision": "19c815003e6c32a54d6ad81af4fbb351",
+    "revision": "91166de7035f3964255c36130f074e5b",
     "url": "/index.html"
   }
 ];
