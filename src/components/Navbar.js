@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-//import logo from '../Assets/logo.png';
-//import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-//import { CgGitFork } from 'react-icons/cg';
-//import { ImBlog } from 'react-icons/im';
+import Border from './Border';
+import logo from '../Assets/logotr.png';
 import {
-  //AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
@@ -32,49 +29,60 @@ function NavBar() {
 
   return (
     <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? 'sticky' : 'navbar'}>
-      <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <dir className="img-fluid logo" alt="brand">
-            <strong className="main-name">Eb</strong>
-          </dir>
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : 'expanded');
-          }}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </Navbar.Toggle>
+      <Container >
+		<Border style={{width:'100%'}} text="header" container="true">
+       <div style={{ display:"flex", width:'100%', justifyContent: 'space-between'}}>
+				<Navbar.Brand href="/" className="d-flex">
+					<Border container="false">
+					  <img
+					    src={logo}
+					    alt="EB"
+					    className="img-fluid"
+					    style={{ maxHeight: '45px' }}
+					  />
+					</Border>
+        </Navbar.Brand>					
+				<Border>
+	        <Navbar.Toggle
+	          aria-controls="responsive-navbar-nav"
+	          onClick={() => {
+	            updateExpanded(expand ? false : 'expanded');
+	          }}
+	        >
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	        </Navbar.Toggle>
+				</Border>
+					</div>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: '2px' }} /> Home
+                <Border text="link" container="true"><Border style={{margin:0, padding:0}}><AiOutlineHome style={{ marginBottom: '2px' }} /> </Border>Home</Border>
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
-                <AiOutlineUser style={{ marginBottom: '2px' }} /> About
+                <Border text="link" container="true"><Border style={{margin:0, padding:0}}><AiOutlineUser style={{ marginBottom: '2px' }} /></Border> About</Border>
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
-                <AiOutlineFundProjectionScreen style={{ marginBottom: '2px' }} /> Projects
+                <Border text="link" container="true"><Border style={{margin:0, padding:0}}><AiOutlineFundProjectionScreen style={{ marginBottom: '2px' }} /> </Border>Projects</Border>
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)}>
-                <CgFileDocument style={{ marginBottom: '2px' }} /> Resume
+                <Border text="link" container="true"><Border style={{margin:0, padding:0}}><CgFileDocument style={{ marginBottom: '2px' }} /> </Border>Resume</Border>
               </Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
+			</Border >
       </Container>
     </Navbar>
   );

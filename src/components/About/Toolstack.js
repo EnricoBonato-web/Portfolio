@@ -1,41 +1,38 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import Border from '../Border';
 import {
   SiLinux,
   SiVisualstudiocode,
   SiPostman,
-  SiArduino,
   SiGooglechrome,
   SiQt,
-  SiGit
+  SiGit,
+	SiApple,
+	SiGitlab
 } from "react-icons/si";
+const icons=[  SiLinux,
+  SiVisualstudiocode,
+  SiPostman,
+  SiGooglechrome,
+  SiQt,
+  SiGit,
+	SiApple,
+	SiGitlab];
 
 function Toolstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiLinux />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiArduino />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGooglechrome />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiQt />
-      </Col>
-    </Row>
-  );
-}
+		<Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+	    {icons.map(icon=>{
+				return <Col xs={4} md={2} className="tech-icons">
+				  <Border>	
+				    {React.createElement(icon, { style: { height: '100px', margin: '10px' },className: 'card-img' })}
+				  </Border>			    
+				</Col>
+					})
+				}
+	    </Row>
+	  );
+	}
 
 export default Toolstack;
