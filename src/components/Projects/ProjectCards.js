@@ -9,6 +9,7 @@ import {
   SiTypescript as typescript,
   SiPhp as php,
   SiHtml5 as html,
+  SiVuedotjs as vue,
 } from 'react-icons/si';
 import {
   DiJava as java,
@@ -25,10 +26,10 @@ function ProjectCards(props) {
     css,
     html,
     java,
+		vue,
   };
-	console.log(props)
   let img = props.imgPath.toLocaleLowerCase();
-	  const immagine = React.createElement(icons[img], {
+	const immagine = React.createElement(icons.hasOwnProperty(img) ? icons[img] : icons["js"], {
 	    style: { height: '100px', margin: '10px' },
 	    className: 'card-img',	
 	});

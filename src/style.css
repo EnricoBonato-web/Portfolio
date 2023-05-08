@@ -142,15 +142,17 @@ button:focus {
 
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
+    padding: 1rem 0 !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
+		flex-wrap: wrap;
   }
 }
 .navbar-brand {
+	max-width: 75%;
   color: rgb(250, 250, 250) !important;
 }
 
@@ -172,6 +174,8 @@ button:focus {
 @media (max-width: 767px) {
   .nav-link {
     padding: 0.7rem 1rem !important;
+		display: flex !important;
+		justify-content: center;
   }
 }
 
@@ -186,19 +190,7 @@ button:focus {
   z-index: 1;
 }
 
-.navbar-nav .nav-item a::after {
-  content: "";
-  position: relative;
-  display: block;
-  height: 5px;
-  width: 0;
-  border-radius: 16px;
-  background: #c95bf5;
-  bottom: 1px;
-  left: 0;
-  z-index: -1;
-  transition: all 0.3s ease-out 0s;
-}
+
 
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
@@ -278,6 +270,7 @@ button:focus {
 .heading-name {
   font-size: 2.5em !important;
   padding-left: 45px !important;
+	width: 100%;
 }
 
 .main-name {
@@ -345,7 +338,7 @@ button:focus {
 .home-about-social-links {
   justify-content: center !important;
   padding-top: 15px !important;
-  display: inline-block !important;
+  display: flex;
   position: relative !important;
   padding-inline-start: 0 !important;
 }
@@ -435,6 +428,8 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   padding: 0 !important;
+	display: flex;
+	justify-content: center;
 }
 
 .blockquote-footer {
@@ -740,4 +735,155 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+.wireframe {
+	background:transparent;
+	padding:0.5rem 0.5rem;
+	margin:0 0.5rem;
+	font-size:1rem;
+  animation: fade 5s forwards;
+	border:solid 2px rgba(255,255,255,0.1);
+	border-top-left-radius: 255px 15px;
+	border-top-right-radius: 15px 225px;
+	border-bottom-right-radius: 225px 15px;
+	border-bottom-left-radius:15px 255px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	position: relative;
+}
+a .wirecontainer:hover{
+	border:solid 2px rgba(255,255,255,1);
+  animation: none;
+}
+.wirecontainer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index:-5;
+}
+.wirecontainer line{
+  stroke-width: 2;
+  animation: strokefade 5s forwards;
+	stroke: rgba(255,255,255,0.1);
+}
+.wiretext{
+	opacity:1;
+	position: absolute;
+	color: transparent;
+  animation: fade-text 6s forwards;
+	color: rgba(255,255,255,0.1);
+	padding-left: 10px;
+	font-family: Caveat;
+	font-size: 20px;
+}
+
+.text-delay {
+	width: 100%;
+	display: flex;
+  animation: fade-in 6s forwards;
+	opacity: 1;
+}
+.text-delay-container {
+	display: flex;
+	opacity: 1;
+	width: 100%;
+  animation: appear-text 6s;
+	color: rgba(255,255,255,1);
+}
+@media (max-width: 767px) {
+.no-animation .text-delay,.wiretext,.wireframe, line ,.text-delay-container{
+	animation: none !important;
+	
+	}
+}
+@media (max-width: 767px) {
+.text-delay-container {
+	flex-wrap: wrap;
+	}
+}
+@keyframes fade-text {
+  100% {
+		color: rgba(255,255,255,0.1);
+  }
+  75% {
+		color: rgba(255,255,255,0.1);
+  }
+  50% {
+		color: rgba(255,255,255,0.2);
+  }
+  25% {
+		color: rgba(255,255,255,0.9);
+  }
+  0% {
+		color: rgba(255,255,255,1);
+  }
+}
+@keyframes appear-text {
+  0% {
+		color: rgba(255,255,255,0.1);
+  }
+  25% {
+		color: rgba(255,255,255,0.1);
+  }
+  50% {
+		color: rgba(255,255,255,0.2);
+  }
+  75% {
+		color: rgba(255,255,255,0.9);
+  }
+  100% {
+		color: rgba(255,255,255,1);
+  }
+}
+@keyframes fade {
+  100% {
+		border:solid 2px rgba(255,255,255,0.1); 
+  }
+  75% {
+		border:solid 2px rgba(255,255,255,0.1); 
+  }
+  50% {
+		border:solid 2px rgba(255,255,255,0.2); 
+  }
+  25% {
+		border:solid 2px rgba(255,255,255,0.9); 
+  }
+  0% {
+		border:solid 2px rgba(255,255,255,1); 
+  }
+}
+@keyframes strokefade {
+  100% {
+		stroke: rgba(255,255,255,0.1);
+  }
+  75% {
+		stroke: rgba(255,255,255,0.1);
+  }
+  50% {
+		stroke: rgba(255,255,255,0.2);
+  }
+  25% {
+		stroke: rgba(255,255,255,0.9);
+  }
+  0% {
+		stroke: rgba(255,255,255,1);
+  }
+}
+@keyframes fade-in {
+  0% {
+		opacity: 0;
+  }
+  25% {
+		opacity: 0;
+  }
+  50% {
+		opacity:  0.2;
+  }
+  75% {
+		opacity: 0.7;
+  }
+  100% {
+		opacity: 1;
+  }
 }
