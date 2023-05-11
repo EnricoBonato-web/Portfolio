@@ -446,11 +446,15 @@ button:focus {
 }
 
 .project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
   height: auto !important;
+}
+
+.project-card .wireframe {
+  height: 100%;
 }
 
 .project-card-view {
@@ -481,6 +485,17 @@ button:focus {
   color: white !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+}
+
+.card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px !important;
+}
+
+.card-text {
+  flex-grow: 1;
 }
 
 .blog-link {
@@ -783,6 +798,7 @@ a .wirecontainer:hover{
 	display: flex;
   animation: fade-in 6s forwards;
 	opacity: 1;
+  height: -webkit-fill-available;
 }
 .text-delay-container {
 	display: flex;
@@ -790,6 +806,7 @@ a .wirecontainer:hover{
 	width: 100%;
   animation: appear-text 6s;
 	color: rgba(255,255,255,1);
+  height: 100%;
 }
 @media (max-width: 767px) {
 .no-animation .text-delay,.wiretext,.wireframe, line ,.text-delay-container{

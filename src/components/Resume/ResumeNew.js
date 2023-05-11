@@ -5,6 +5,7 @@ import pdf from '../../Assets/EnricoBonatoCV.pdf';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { Document, Page , pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import Border from '../Border';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
@@ -19,10 +20,12 @@ function ResumeNew() {
     <div>
       <Container fluid className="resume-section">
         <Row style={{ justifyContent: 'center', position: 'relative' }}>
-          <Button variant="primary" href={pdf} target="_blank" style={{ maxWidth: '250px' }}>
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
+          <Border>
+            <Button  variant="primary" href={pdf} target="_blank" style={{ maxWidth: '250px', margin: 'auto' }}>
+              <AiOutlineDownload />
+              &nbsp;Download CV
+            </Button>
+          </Border>
         </Row>
 
         <Row className="resume">
@@ -32,10 +35,12 @@ function ResumeNew() {
         </Row>
 
         <Row style={{ justifyContent: 'center', position: 'relative' }}>
-          <Button variant="primary" href={pdf} target="_blank" style={{ maxWidth: '250px' }}>
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
+        <Border style={{ justifyContent: 'center' }}>
+            <Button  variant="primary" href={pdf} target="_blank" style={{ maxWidth: '250px', margin: 'auto' }}>
+              <AiOutlineDownload />
+              &nbsp;Download CV
+            </Button>
+          </Border>
         </Row>
       </Container>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { BiLinkExternal } from 'react-icons/bi';
+import Border from '../Border';
 import { DiJavascript1 as javascript, DiReact as react, DiNodejs as nodejs } from 'react-icons/di';
 import {
   SiNextdotjs as node,
@@ -30,21 +31,32 @@ function ProjectCards(props) {
   };
   let img = props.imgPath.toLocaleLowerCase();
 	const immagine = React.createElement(icons.hasOwnProperty(img) ? icons[img] : icons["js"], {
-	    style: { height: '100px', margin: '10px' },
+	    style: { height: '80px', margin: '10px' },
 	    className: 'card-img',	
 	});
   return (
-    <Card className="project-card-view">
-      {immagine}
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: 'justify' }}>{props.description}</Card.Text>
-        <Button variant="primary" href={props.link} target="_blank">
-          <BiLinkExternal /> &nbsp;
-          {props.isBlog ? 'View Blog' : 'View Project'}
-        </Button>
-      </Card.Body>
-    </Card>
+    <Border text={"Project"} container="true">
+
+      <Card className="project-card-view">
+        <Border style={{height:'100px',margin:"10px"}}>
+          {immagine}
+        </Border>
+        <Card.Body>
+        <Border text={"title"}>
+          <Card.Title>{props.title}</Card.Title>
+        </Border>
+          <Border text={"description"}>
+            <Card.Text style={{ textAlign: 'justify' }}>{props.description}</Card.Text>
+          </Border>
+          <Border style={{margin:'auto'}}>
+            <Button variant="primary" href={props.link} target="_blank">
+              <BiLinkExternal /> &nbsp;
+              {props.isBlog ? 'View Blog' : 'View Project'}
+            </Button>
+          </Border>
+        </Card.Body>
+      </Card>
+    </Border>
   );
 }
 export default ProjectCards;

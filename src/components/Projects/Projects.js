@@ -1,21 +1,26 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { GetRepoData } from './GetRepoData';
+import Border from '../Border';
 
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
+				<Border text="Main Title">
+          <h1 className="project-heading">
+            My Recent <strong className="purple">Works </strong>
+          </h1>
+        </Border>
+				<Border text="sub title" style={{margin: '8px'}}>
         <p style={{ color: 'white' }}>{`Here are a few projects I've worked on recently.`}</p>
-          <GetRepoData
-            showStars={true}
-            numOfrepos={10}
-            userName={'EnricoBonato-web'}
-            showLanguage={false}
-          />
+        </Border>
+        <GetRepoData
+          showStars={true}
+          numOfrepos={10}
+          userName={'EnricoBonato-web'}
+          showLanguage={false}
+        />
       </Container>
     </Container>
   );
