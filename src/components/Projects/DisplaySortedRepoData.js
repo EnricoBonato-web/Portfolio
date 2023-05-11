@@ -6,7 +6,7 @@ import {  Row } from 'react-bootstrap';
 function DisplaySortedRepoData({ repoData, numOfrepos, showStars, showLanguage }) {
   const text = (
     <Row style={{ justifyContent: 'center', paddingBottom: '10px' }}>
-      <Col md={4} className="project-card" key={0}>
+      <Col lg={4} md={6} sm={6}className="project-card" key={0}>
             <ProjectCards
               key={0}
               title={"SWEDesigner-source"}
@@ -17,7 +17,7 @@ function DisplaySortedRepoData({ repoData, numOfrepos, showStars, showLanguage }
           </Col>
       {repoData.sort((a,b)=>a.id<b.id?1:-1).map(repo => {
 					{if(repo.description!==null){
-	         return <Col md={4} className="project-card" key={repo.id}>
+	         return <Col lg={4} md={6} sm={6} className="project-card" key={repo.id}>
 	            <ProjectCards
 	              key={repo.id}
 	              title={repo.name}

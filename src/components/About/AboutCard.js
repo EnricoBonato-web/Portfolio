@@ -10,7 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Enrico Bonato </span>
             from <span className="purple"> Castelfranco Veneto Tv, Italy.</span>
-            <br />I am a software specialis at Accenture.
+            <br />I am a User Interface Developer at OnRooby.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
@@ -34,11 +34,3 @@ function AboutCard() {
 }
 
 export default AboutCard;
-
-
-/*
-<p style={{ color: "rgb(155 126 172)" }}>
-"Strive to build things that make a difference!"{" "}
-</p>
-<footer className="blockquote-footer">Soumyajit</footer>
-*/
