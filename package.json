@@ -1,6 +1,6 @@
 {
-  "homepage": "https://EnricoBonato-web.github.io",
-  "name": "portfolio",
+  "homepage": "https://enricobonato-web.github.io/Portfolio-wireframe/",
+  "name": "wireframe",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -24,8 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
